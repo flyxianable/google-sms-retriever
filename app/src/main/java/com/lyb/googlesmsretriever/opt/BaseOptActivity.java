@@ -93,16 +93,8 @@ public class BaseOptActivity extends Activity implements OtpReceivedInterface{
     @Override
     public void onOtpReceived(String otp) {
         if(otp.contains("xxxx")){
-            int startIndx = otp.indexOf("[");
-            int endIndex = otp.indexOf("]");
-            if(startIndx < 0 || endIndex < 0){
-                startIndx = otp.indexOf("<");
-                endIndex = otp.indexOf(">");
-            }
-            if(startIndx > 0 && endIndex > 0) {
-                String code = otp.substring(startIndx + 1, endIndex);
-                onReceiveMsgCode(code);
-            }
+
+            //按照短信格式截取短信内的验证码
         }
 
     }
