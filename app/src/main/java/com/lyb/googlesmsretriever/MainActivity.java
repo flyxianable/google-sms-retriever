@@ -13,6 +13,16 @@ public class MainActivity extends BaseOptActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+    }
+
+    private void sendSMs(){
+
+        //发送短信的代码
+        //.....
+
+        /**
+         * 在发送短信后发起监听
+         */
         smsRetriever();
     }
 
