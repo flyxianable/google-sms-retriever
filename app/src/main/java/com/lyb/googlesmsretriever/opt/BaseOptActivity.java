@@ -97,7 +97,6 @@ public abstract class BaseOptActivity extends Activity implements OtpReceivedInt
         unRegisterSmsReceiver();
     }
 
-    protected  void onReceiveMsgCode(String msgCode){ }
 
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
