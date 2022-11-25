@@ -4,11 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.lyb.googlesmsretriever.opt.BaseOptActivity;
+
+public class MainActivity extends BaseOptActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        smsRetriever();
+    }
+
+    @Override
+    public void onOtpReceived(String otp) {
+        if(otp.contains("xxxx")){
+
+            //按照短信格式截取短信内的验证码
+        }
+
     }
 }

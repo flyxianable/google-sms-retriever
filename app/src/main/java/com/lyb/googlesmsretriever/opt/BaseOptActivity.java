@@ -12,7 +12,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.lyb.googlesmsretriever.DeviceUtils;
 
-public class BaseOptActivity extends Activity implements OtpReceivedInterface{
+public abstract class BaseOptActivity extends Activity implements OtpReceivedInterface{
 
     protected SmsBroadcastReceiver mSmsBroadcastReceiver;
     protected boolean isSmsReceiverRegistered;
@@ -90,14 +90,7 @@ public class BaseOptActivity extends Activity implements OtpReceivedInterface{
 //        }
 //    }
 
-    @Override
-    public void onOtpReceived(String otp) {
-        if(otp.contains("xxxx")){
 
-            //按照短信格式截取短信内的验证码
-        }
-
-    }
 
     @Override
     public void onOtpTimeout() {
